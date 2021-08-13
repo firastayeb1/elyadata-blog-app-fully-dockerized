@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/newBlog']">New Blog</a>
+        </li>
+        <li class="nav-item">
+          <input [(ngModel)]='filterWord' class="nav-link mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </li >
+        <li class="nav-item">
+          <button class="nav-link btn btn-outline-success my-2 my-sm-0 mon-btn" (click)="search()">Search</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

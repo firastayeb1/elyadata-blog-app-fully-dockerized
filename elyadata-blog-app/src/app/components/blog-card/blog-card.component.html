@@ -1,0 +1,16 @@
+<div class="card blog-card" 
+[class.liked]= "blogCard!.likes > blogCard!.dislikes" 
+[class.disliked]= "blogCard!.dislikes > blogCard!.likes">
+
+    <img class="card-img-top" [src]="blogCard?.img?blogCard?.img:'../../../assets/images/blog.png'" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{blogCard?.title}}</h5>
+      <p class="card-subtitle">{{blogCard?.author}}</p>
+      <p class="card-text">{{blogCard?.content}}</p>
+      <a [routerLink]="['/blog/'+blogCard?.id]" class="btn btn-primary">Read more</a>
+    </div>
+    <div class="card-footer text-muted">
+      <a class="card-link btn btn-primary"  (click)="like()">Like {{blogCard?.likes}}</a>
+      <a class="card-link btn btn-danger" (click)="dislike()">Dislike {{blogCard?.dislikes}}</a>
+    </div>
+  </div>

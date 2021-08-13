@@ -1,0 +1,17 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+.blog-card{
+    margin: 5px;
+    width: 15rem;
+}
+
+.liked{
+     
+    @extend .border;
+    @extend .border-success ;
+}
+.disliked{
+    @extend .border;
+    @extend .border-danger ;
+}

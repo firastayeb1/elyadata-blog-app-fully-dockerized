@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8">
+
+            <!-- the actual blog post: title/author/date/content -->
+            <h1><a >{{blog?.title}}</a></h1>
+            <p class="lead"><i class="fa fa-user"></i> by <a >{{blog?.author}}</a>
+            </p>
+            <hr>
+            <img [src]="blog?.img?blog?.img:'../../../assets/images/blog.png'" class="img-responsive">
+            <hr>
+            <p>{{blog?.content}}</p>
+            <br/>
+            </div>
+            </div>
+</div>
